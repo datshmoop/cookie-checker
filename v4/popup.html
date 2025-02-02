@@ -23,8 +23,16 @@
             font-size: 14px;
             transition: background-color 0.2s ease, transform 0.1s ease;
         }
+        
         button:hover {
             transform: scale(1.05);
+        }
+        .fetch-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .fetch-btn:hover {
+            background-color: #218838;
         }
         .delete-btn {
             background-color: #dc3545;
@@ -119,8 +127,9 @@
         </ul>
     </div>
 
-    <button id="getCookies">Fetch Cookies</button>
+    <button id="getCookies" class="fetch-btn">Fetch Cookies</button>
     <button id="deleteAllCookies" class="delete-btn">Delete All Cookies</button>
+    
 
     <table>
         <thead>
