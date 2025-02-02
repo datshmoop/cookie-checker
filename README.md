@@ -22,4 +22,5 @@ STEPS:
 
 NOTES:
 - Need to use a chromium-based browser, as it is a chrome extension. eg. Chrome, Opera, OperaGX, etc.
+- Although the manifest does say 3, the extension works for 2 as well.
 - Due to limited time and not enough resources, oftentimes, cookies are not documented and will not yield any search results. This is normal (unfortunately), but google has been planning to phase out third party cookies for quite some time now. 
