@@ -7,9 +7,9 @@ Initially built using a demo provided by Google for the chrome.cookies api, adde
 ## Challenges we ran into
 Finding an API for the description/actual use of the cookie was next to impossible, and ideally this information would be displayed directly in the browser. Instead, we opted to use a website search instead.
 ## Accomplishments that we're proud of
-
+First time building something for a hackathon, so thats something.
 ## What we learned
-
+It is hard to find an API for cookies not provided by chrome.
 ## What's next for cookie-checker
 If you want to try it out, you can download from the repo linked below.
 
