@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cookie Tracker</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 400px; /* Increased width */
+            padding: 15px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 14px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .info-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .info-btn:hover {
+            background-color: #0056b3;
+        }
+        .toggle-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+        .toggle-btn:hover {
+            background-color: #5a6268;
+        }
+
+        #instructions {
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transition: opacity 0.3s ease, height 0.3s ease;
+        }
+        #instructions.hidden {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Ensure the table expands to fit */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+            font-size: 12px;
+            word-break: break-word;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tbody {
+            max-height: 250px;
+            overflow-y: auto;
+            display: block;
+        }
+        thead, tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cookie Tracker</h2>
+
+    <button id="toggleInstructions" class="toggle-btn">Show Instructions</button>
+    <div id="instructions" class="hidden">
+        <p><strong>How to Use:</strong></p>
+        <ul style="text-align: left; padding-left: 20px;">
+            <li>Click "Fetch Cookies" to see cookies used on this site.</li>
+            <li>Use "Search Info" to learn about a cookie at <a href="https://cookiesearch.org/" target="_blank">cookiesearch.org</a>.</li>
+            <li>Click "Delete" to remove a specific cookie.</li>
+            <li>Click "Delete All Cookies" to remove all cookies for this site.</li>
+        </ul>
+    </div>
+
+    <button id="getCookies">Fetch Cookies</button>
+    <button id="deleteAllCookies" class="delete-btn">Delete All Cookies</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cookie Name</th>
+                <th>Domain</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cookieTableBody">
+        </tbody>
+    </table>
+</body>
+</html>
