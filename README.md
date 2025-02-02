@@ -14,7 +14,7 @@ It is hard to find an API for cookies not provided by chrome.
 If you want to try it out, you can download from the repo linked below.
 
 STEPS:
-1. download "unloaded" folder from repo.
+1. download "v4" folder from repo for most recent, otherwise select the other versions.
 2. go to chrome://extensions
 3. activate developer mode
 4. click load unpacked
